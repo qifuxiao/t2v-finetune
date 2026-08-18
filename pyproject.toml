@@ -1,0 +1,36 @@
+[project]
+name = "t2v-finetune"
+version = "0.1.0"
+description = "Stage 1 Multimodal Video-Text Fine-tuning Pipeline for 3x A100 GPUs"
+authors = [
+    {name = "qifuxiao", email = "867225266@qq.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "transformers>=4.40.0",
+    "peft>=0.10.0",
+    "accelerate>=0.29.0",
+    "deepspeed>=0.14.0",
+    "decord>=0.6.0",
+    "numpy>=1.26.0",
+    "pillow>=10.0.0",
+    "diffusers (>=0.39.0,<0.40.0)",
+    "sentencepiece (>=0.2.2,<0.3.0)",
+    "tiktoken (>=0.13.0,<0.14.0)",
+    "packaging (>=26.3,<27.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "msgpack (>=1.2.1,<2.0.0)",
+    "protobuf (>=7.35.1,<8.0.0)",
+    "imageio (>=2.37.4,<3.0.0)",
+    "imageio-ffmpeg (>=0.6.0,<0.7.0)",
+]
+
+[tool.poetry]
+packages = [{include = "t2v_finetune", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
